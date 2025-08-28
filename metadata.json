@@ -1,0 +1,5 @@
+{
+  "name": "Crypto Price Tracker",
+  "description": "A sleek, real-time cryptocurrency price tracking application built with React and Tailwind CSS, utilizing the CoinGecko API to display the latest market data.",
+  "requestFramePermissions": []
+}
