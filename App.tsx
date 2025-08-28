@@ -8,6 +8,7 @@ import CoinRow from './components/CoinRow';
 import Pagination from './components/Pagination';
 import LoadingSpinner from './components/LoadingSpinner';
 import { useDebounce } from './hooks/useDebounce';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
     const [coins, setCoins] = useState<Coin[]>([]);
@@ -59,9 +60,9 @@ const App: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-900 text-gray-200 font-sans">
+        <div className="min-h-screen bg-gray-900 text-gray-200 font-sans flex flex-col">
             <Header />
-            <main className="container mx-auto px-4 py-8">
+            <main className="container mx-auto px-4 py-8 flex-grow">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
                     <h1 className="text-3xl font-bold text-white">Market Overview</h1>
                     <SearchBar searchTerm={searchTerm} onSearchChange={(e) => setSearchTerm(e.target.value)} />
@@ -122,6 +123,7 @@ const App: React.FC = () => {
                     />
                 )}
             </main>
+            <Footer />
         </div>
     );
 };
